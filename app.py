@@ -9,7 +9,7 @@ load_dotenv()  # Load variables from .env
 app = Flask(__name__)
 app.secret_key = 'ehfbhioohtipuj'
 app.config['MONGO_URI'] = os.getenv('MONGO')
-
+# todo list
 
 mongo = PyMongo(app)
 bcrypt = Bcrypt(app)
