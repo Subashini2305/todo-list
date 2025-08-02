@@ -1,12 +1,14 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager, login_user, login_required, logout_user, UserMixin, current_user
-
+from dotenv import load_dotenv
+load_dotenv()  # Load variables from .env
 app = Flask(__name__)
 app.secret_key = 'ehfbhioohtipuj'
-app.config['MONGO_URI'] = 'mongodb+srv://subasrinivasan2005:lqRi6WV1H7itxEuj@cluster0.hdlwbgk.mongodb.net/todo?retryWrites=true&w=majority&appName=Cluster0'
+app.config['MONGO_URI'] = os.getenv('MONGO')
 
 
 mongo = PyMongo(app)
