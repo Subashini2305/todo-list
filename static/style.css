@@ -1,0 +1,239 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Montserrat:wght@400;600&display=swap');
+
+/* GLOBAL BODY STYLE (for login/register pages) */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, rgba(201, 148, 175, 0.7), rgba(140, 108, 124, 0.6)), 
+              url("https://marketplace.canva.com/EAFHQBvpZVQ/1/0/400w/canva-pink-%26-white-floral-flower-desktop-wallpaper-HEtFecCKg-0.jpg") 
+              no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+.flash-message {
+  background-color: #ffe0e0;
+  color: #b10000;
+  padding: 12px;
+  margin: 20px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* LOGIN/REGISTER CONTAINER */
+.container {
+  width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* FORM HEADINGS */
+h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #801041;
+}
+
+/* INPUT FIELDS */
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* BUTTON STYLE */
+button {
+  width: 95%;
+  padding: 12px;
+  background: linear-gradient(to right, #9d557e, #482c3d);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+
+/* LINKS */
+a {
+  color: #a0e7ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LIST STYLE FOR TODOS */
+ul {
+  list-style: none;
+  padding: 0;
+  color: white;
+}
+
+li {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+/* HOME PAGE BACKGROUND */
+body.home-bg {
+  font-family: 'Figtree', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(to right, rgba(190, 135, 174, 0.6), rgba(109, 88, 104, 0.5)),
+              url("https://imgs.search.brave.com/yKpaJ5_neCv93HdcWnVpplvd2L02wdCwudmYreDQQ2E/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvY2xl/YXItc2t5LWFlc3Ro/ZXRpYy1waW5rLWRl/c2t0b3AtZGNiZWhr/MnpwcTRnNnlkdC5q/cGc")
+              no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* DASHBOARD STYLE */
+.dashboard-container {
+  padding: 20px 40px 60px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.logout-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 6cm;          /* sets width to about 6 centimeters */
+  padding: 8px 0;      /* vertical padding only, horizontal handled by width */
+  background: #fe6b8b;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;  /* center text inside the box */
+}
+
+
+
+/* ADD TASK FORM */
+.todo-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.todo-form input {
+  width: 60%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+}
+
+.todo-form button {
+  background: #00c9a7;
+  color: white;
+  padding: 14px 25px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.todo-form button:hover {
+  background: #007f6b;
+}
+
+/* TODOS GRID */
+.todo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.todo-item {
+  background: #ffffffcc;
+  padding: 15px 20px;
+  border-radius: 20px;
+  width: 220px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.todo-item:hover {
+  transform: scale(1.03);
+}
+
+.todo-item p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.todo-item form {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.todo-item button {
+  background: #f3f3f3;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 6px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* MOTIVATIONAL BOX */
+.motivational-box {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-left: 6px solid #00c9a7;
+  padding: 15px 25px;
+  margin: 20px auto 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+  max-width: 700px;
+  text-align: center;
+}

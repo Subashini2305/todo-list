@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your To-Do Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="home-bg">
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h1>🌟 Hello, {{ username }}! Stay productive!</h1>
+    </div>
+
+    <div class="motivational-box">
+      "Productivity is never an accident. It's always the result of a commitment to excellence."
+    </div>
+
+    
+
+    <form class="todo-form" method="POST" action="{{ url_for('add_todo') }}">
+      <input type="text" name="task" placeholder="Type your task here..." required>
+      <button type="submit">+ Add</button>
+    </form>
+
+    <div class="todo-grid">
+      {% for todo in todos %}
+      <div class="todo-item">
+        <p>{{ todo.task }}</p>
+        <form method="GET" action="{{ url_for('update_todo', todo_id=todo.id) }}">
+          <button title="Mark Done">{{ '✔️' if todo.done else '❌' }}</button>
+        </form>
+        <form method="GET" action="{{ url_for('delete_todo', todo_id=todo.id) }}">
+          <button title="Delete Task">🗑️</button>
+        </form>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <form action="{{ url_for('logout') }}" method="GET">
+    <button class="logout-btn" type="submit">Logout</button>
+  </form>
+</body>
+</html>
